@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    grid-template-rows: auto auto;
+
+    height: 100%;
+    width: 100%;
+
+}
+h1,h2{
+    text-align: center;
+    text-transform: capitalize;
+}
+h1 {
+    font-family: "Edwardian Script ITC";
+    font-size: 2vw;
+}
+h2 {
+    font-family: cursive;
+    font-style: oblique;
+}
+
+main > div, main > ul {
+    border: black solid 2px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    justify-self: stretch;
+    grid-column: 2/4;
+    grid-row: 2/2;
+}
+li{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    height: 20%;
+    font-family: fantasy;
+    font-size: 20px;
+}
+.box{
+    padding: 5px;
+}
+#green {
+    background: limegreen;
+}
+#blue {
+    background: #0048ff;
+}
+#cyan {
+    background: cyan;
+}
+#purple {
+    background: blueviolet;
+}
+#yellow {
+    background: yellow;
+}
+
+.box:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+
+}
+img {
+    width: 40%;
+    margin: auto;
+    justify-self: center;
+    text-align: center;
+}
+
