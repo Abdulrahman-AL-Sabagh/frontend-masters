@@ -7,16 +7,15 @@ display = document.getElementById("display");
 document.getElementById("C").addEventListener("click", () => {
     display.innerHTML = 0
     secondValue = 0
-    currentValue = 0
     lastoperation = "";
+    currentValue="";
+
 });
 
 for (const i of document.getElementsByClassName("num")) {
 
     i.addEventListener("click", () => {
-        if (currentValue === 0) {
-            currentValue =""
-        }
+
         let value = parseInt(display.innerHTML + i.innerHTML);
         currentValue === "" ? currentValue=value : secondValue = value;
         console.log(value)
@@ -80,6 +79,7 @@ document.getElementById("equals").addEventListener("click", () => {
     currentValue===""?display.innerHTML=display.innerHTML:display.innerHTML=currentValue;
     secondValue = 0
     lastoperation = ""
+
 })
 document.getElementById("del").addEventListener("click", () => {
     display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length - 1);
