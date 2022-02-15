@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@300&display=swap");
+
+$font1: "Libre Baskerville", serif;
+$font2: "Roboto", sans-serif;
+
+$black: #010a26;
+$lightblack: #011640;
+$blue: #034aa6;
+$lightblue: #04b2d9;
+$skyblue: #05f2f2;
+
+.button {
+    padding: 0.5rem;
+    background-color: lighten($black, 20%);
+    border-radius: 5px;
+    font-family: $font1;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: white;
+
+        transform: scale(1.3);
+    }
+}
+
+i {
+    transition: 0.3s;
+    color: $blue;
+    &:first-child {
+        color: $lightblue;
+    }
+
+    &::before,
+    &::after {
+        font-family: inherit;
+    }
+    &:hover {
+        transform: scale(1.5);
+        color: $lightblue;
+    }
+}
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    font-family: $font2;
+    background-color: $black;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: normal;
+    .gradient {
+        background: linear-gradient(90deg, rgba(0, 254, 255, 1) 0%, rgba(88, 13, 208, 1) 100%,  rgba(0, 254, 255, 1) 0%, rgba(88, 13, 208, 1) 100%);
+        height: 5px;
+        background-size: 200% 100%;
+        background-position:0 100%;
+        animation: gradient 2s infinite ease-in-out;
+
+       @keyframes gradient {
+           0% {
+               background-position: 0% 100%;
+           }
+           100% {
+               background-position: 200% 100%;
+           }
+       }
+    }
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 2rem;
+    a:first-child {
+        color: $skyblue;
+        font-family: $font1;
+        font-size: 2rem;
+        flex-basis: 100%;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+        display: block;
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+a {
+    color: $lightblue;
+    transition: 0.5s;
+}
+a:hover {
+    color: $skyblue;
+}
+
+// intro styles
+
+#intro {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    span {
+        display: block;
+        font-family: $font1;
+        font-size: 3rem;
+        color: $skyblue;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+#contact {
+    padding: 1rem 2rem;
+    background-color: $blue;
+    margin: 0 auto;
+    line-height: 2;
+    text-align: center;
+
+    div {
+        margin: auto;
+        width: 400px;
+    }
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-family: $font1;
+        font-weight: bolder;
+    }
+    a {
+        display: block;
+        margin-top: 5%;
+    }
+    b {
+        color: $lightblue;
+    }
+}
+
+footer {
+    padding: 2rem;
+    background-color: $lightblack;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .footerIcons {
+        display: flex;
+        width: 50%;
+        color: inherit;
+        font-size: 4rem;
+        a {
+            margin: 5%;
+            text-decoration: none;
+        }
+    }
+    & div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 900px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        a:first-child {
+            flex-basis: auto;
+            text-align: left;
+            margin-right: auto;
+        }
+    }
+}
